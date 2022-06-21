@@ -1,0 +1,31 @@
+ALGORITHM algorithm_1
+VAR
+    nb_char, nb_word, nb_voy : INTEGER;
+    i,j : INTEGER:=0;
+    ch:STRING;
+    ch_voy : STRING:= [a,e,u,i,o,y]
+BEGIN
+   write("give your sentence please");
+   read (ch);
+while( ch[i] != "." ) 
+{
+    nb_char:=nb_char+1;
+
+    if (ch[i] = " ") then 
+    nb_word:nb_word+1;
+    end if
+
+    while(j<ch_voy.length){
+
+       if(ch[i]= ch_voy[j]) then
+       nb_voy:nb_voy +1;
+       end if
+       j:=j+1;
+    }
+    i:=i+1;
+}
+write('the number of caracter is =', nb_char);
+write('the number of words is =', nb_word);
+write('the number of vowels is =', nb_voy);
+
+END
